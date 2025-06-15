@@ -8,9 +8,9 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ath11k-firmware
-PKG_SOURCE_DATE:=2025-05-05
-PKG_SOURCE_VERSION:=0f8b9e47e63d5be869fe7b0798d236029947d7ad
-PKG_MIRROR_HASH:=d1713b3c3662802225e7283ec4fb0302fd4dbe745761b40cf4d7b49eabe6efdb
+PKG_SOURCE_DATE:=2025-06-15
+PKG_SOURCE_VERSION:=8aa18a9567d705180ee264cb4ac5d53b73052d54
+PKG_MIRROR_HASH:=5978c5e48dd1e205f9fee0e7bd8e0450ceb106adf3026f2e019bb0788bc00e99
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
@@ -63,8 +63,8 @@ define Build/Compile
 endef
 
 define Package/ath11k-firmware-ipq5018/install
-	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/IPQ5018/hw1.0
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/IPQ5018/hw1.0/* $(1)/lib/firmware/ath11k/IPQ5018/hw1.0/
+	$(INSTALL_DIR) $(1)/lib/firmware/IPQ5018/hw1.0
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/IPQ5018/hw1.0/* $(1)/lib/firmware/IPQ5018/
 endef
 
 define Package/ath11k-firmware-ipq6018/install
