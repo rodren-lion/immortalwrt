@@ -87,7 +87,7 @@ define Device/linksys_mr5500
 	$(call Device/linksys_ipq50xx_mx_base)
 	DEVICE_MODEL := MR5500
 	DEVICE_DTS_CONFIG := config@mp03.1
-	DEVICE_PACKAGES := kmod-ath11k-pci ath11k-firmware-qcn9074 ipq-wifi-linksys_mr5500 kmod-usb-ledtrig-usbport
+	DEVICE_PACKAGES := ath11k-firmware-qcn9074 ipq-wifi-linksys_mr5500 kmod-usb-ledtrig-usbport
 endef
 TARGET_DEVICES += linksys_mr5500
 
@@ -103,7 +103,7 @@ define Device/linksys_mx5500
 	$(call Device/linksys_ipq50xx_mx_base)
 	DEVICE_MODEL := MX5500
 	DEVICE_DTS_CONFIG := config@mp03.1
-	DEVICE_PACKAGES := kmod-ath11k-pci ath11k-firmware-qcn9074 ipq-wifi-linksys_mx5500
+	DEVICE_PACKAGES := ath11k-firmware-qcn9074 ipq-wifi-linksys_mx5500
 endef
 TARGET_DEVICES += linksys_mx5500
 
@@ -111,7 +111,7 @@ define Device/linksys_spnmx56
 	$(call Device/linksys_ipq50xx_mx_base)
 	DEVICE_MODEL := SPNMX56
 	DEVICE_DTS_CONFIG := config@mp03.1
-	DEVICE_PACKAGES := kmod-ath11k-pci ath11k-firmware-qcn9074 ipq-wifi-linksys_spnmx56
+	DEVICE_PACKAGES := ath11k-firmware-qcn9074 ipq-wifi-linksys_spnmx56
 endef
 TARGET_DEVICES += linksys_spnmx56
 
@@ -126,7 +126,7 @@ define Device/xiaomi_ax6000
 	PAGESIZE := 2048
 	SOC := ipq5018
 	DEVICE_DTS_CONFIG := config@mp03.1
-	DEVICE_PACKAGES := kmod-ath11k-pci ath11k-firmware-qcn9074 kmod-ath10k-ct-smallbuffers ath10k-firmware-qca9887-ct ipq-wifi-xiaomi_ax6000
+	DEVICE_PACKAGES := ath11k-firmware-qcn9074 kmod-ath10k-smallbuffers ath10k-firmware-qca9887 ipq-wifi-xiaomi_ax6000
 ifneq ($(CONFIG_TARGET_ROOTFS_INITRAMFS),)
 	ARTIFACTS := initramfs-factory.ubi
 	ARTIFACT/initramfs-factory.ubi := append-image-stage initramfs-uImage.itb | ubinize-kernel
